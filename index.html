@@ -1,168 +1,24 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
     <title>NASA PACE: Cool Ocean Nerds 🌊</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0e1117;
-            color: #ffffff;
-            overflow-x: hidden;
-            margin: 0;
-            padding: 0;
-        }
-        h1, h2, h3, p {
-            text-align: center;
-            margin: 0;
-        }
-        .hero-section {
-            background-image: url('https://raw.githubusercontent.com/Bushrahhh/OribtinPACE/refs/heads/main/images/PLANET.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 100px 20px;
-            color: #ffffff;
-            text-shadow: 2px 2px #000;
-            position: relative;
-        }
-        .hero-section h1 {
-            font-size: 3.5rem;
-            animation: neon-flicker 1.5s infinite;
-        }
-        .hero-section p {
-            font-size: 1.5rem;
-            margin: 20px 0;
-        }
-        .button {
-            background-color: #ff6b6b;
-            border: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: transform 0.2s;
-            display: inline-block;
-        }
-        .button:hover {
-            transform: scale(1.05);
-        }
-        section {
-            padding: 50px 20px;
-        }
-        .content-box {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .fact-box {
-            background: #1c1f26;
-            padding: 20px;
-            border-radius: 20px;
-            margin: 10px;
-            width: 45%;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s, background-color 0.3s;
-        }
-        .fact-box:hover {
-            transform: scale(1.05);
-            background-color: #2d3748;
-        }
-        .fact-box h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: #ffeb3b;
-        }
-        .fact-box p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-        .quiz-section {
-            background-color: #333a45;
-            color: white;
-            padding: 50px;
-            border-radius: 25px;
-            text-align: left;
-        }
-        .quiz-section h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .quiz-question {
-            margin: 20px 0;
-        }
-        .quiz-options label {
-            display: block;
-            background-color: #2c313c;
-            padding: 10px;
-            border-radius: 10px;
-            margin: 10px 0;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .quiz-options input {
-            display: none;
-        }
-        .quiz-options input:checked + label {
-            background-color: #4caf50;
-        }
-        .quiz-options label:hover {
-            background-color: #3e4451;
-        }
-        .animated-button {
-            background-color: #3b82f6;
-            border: none;
-            padding: 15px 25px;
-            font-size: 18px;
-            color: white;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: transform 0.2s, background-color 0.3s;
-            display: block;
-            margin: 20px auto;
-        }
-        .animated-button:hover {
-            transform: scale(1.1);
-            background-color: #2563eb;
-        }
-        .footer {
-            background-color: #0e1117;
-            color: #f6f6f6;
-            padding: 20px;
-            text-align: center;
-        }
-        .score-display {
-            font-size: 1.5rem;
-            background-color: #ff6b6b;
-            padding: 10px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-top: 20px;
-            text-align: center;
-        }
-        .emoji {
-            font-size: 1.8rem;
-            margin-right: 8px;
-        }
-        @keyframes neon-flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.85; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
 
+<body>
     <!-- Sidebar -->
     <section id="sidebar">
         <div class="inner">
             <nav>
                 <ul>
-                    <li><a href="#intro">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#learn">NASA PACE 101</a></li>
                     <li><a href="#funfacts">Cool Ocean Facts 🌊</a></li>
                     <li><a href="#quiz">Take the Quiz 🎮</a></li>
@@ -174,627 +30,486 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
-<!-- Hero Section (OrbitinPACE Intro) -->
-<section id="intro" class="hero-section" style="background: linear-gradient(135deg, #81e6ff, #a67eff); color: #fff; position: relative; height: 100vh; overflow: hidden;">
-    <div class="inner" style="text-align: center; padding: 100px 20px; position: relative; z-index: 1;">
-        <h1 style="font-size: 5em; font-weight: 900; text-transform: uppercase; background: linear-gradient(45deg, #33d4ff, #aa88ff); -webkit-background-clip: text; color: transparent; margin-bottom: 0.3em; letter-spacing: 2px;">
-            OrbitinPACE 🌌
-        </h1>
-        <p style="font-size: 1.6em; margin-top: 10px; color: #e8eaff;">
-            Learn the PACE of the Space with AI 🛰️—Transform NASA’s data into stories that light up classrooms! 🚀 Dive into oceans, decode clouds, and explore Earth’s atmosphere in a way that’s never been seen before.
-        </p>
-        <div style="margin: 50px 0;">
-            <button class="button" onclick="document.getElementById('learn').scrollIntoView({behavior: 'smooth'});" style="background: linear-gradient(135deg, #33d4ff, #aa88ff); padding: 20px 45px; font-size: 1.3em; color: #fff; border: none; cursor: pointer; border-radius: 50px; box-shadow: 0 15px 35px rgba(51, 212, 255, 0.4); transition: transform 0.3s, box-shadow 0.3s;">
-                Launch Into Orbit 🚀
-            </button>
-        </div>
-        <p style="font-size: 1.2em; color: #33d4ff;">Decode the Data. Ignite Curiosity. Build Ocean Literacy 🌍</p>
-    </div>
+        <!-- Hero Section (OrbitinPACE Intro) -->
+        <section id="intro" class="hero-section"
+            style="background: linear-gradient(135deg, #81e6ff, #a67eff); color: #fff; position: relative; height: 100vh; overflow: hidden;">
+            <div class="inner" style="text-align: center; padding: 100px 20px; position: relative; z-index: 1;">
+                <h1
+                    style="font-size: 5em; font-weight: 900; text-transform: uppercase; background: linear-gradient(45deg, #33d4ff, #aa88ff); -webkit-background-clip: text; color: transparent; margin-bottom: 0.3em; letter-spacing: 2px;">
+                    OrbitinPACE 🌌
+                </h1>
+                <p style="font-size: 1.6em; margin-top: 10px; color: #e8eaff;">
+                    Learn the PACE of the Space with AI 🛰️—Transform NASA’s data into stories that light up classrooms!
+                    🚀 Dive into oceans, decode clouds, and explore Earth’s atmosphere in a way that’s never been seen
+                    before.
+                </p>
+                <div style="margin: 50px 0;">
+                    <button class="button"
+                        onclick="document.getElementById('learn').scrollIntoView({behavior: 'smooth'});"
+                        style="background: linear-gradient(135deg, #33d4ff, #aa88ff); padding: 20px 45px; font-size: 1.3em; color: #fff; border: none; cursor: pointer; border-radius: 50px; box-shadow: 0 15px 35px rgba(51, 212, 255, 0.4); transition: transform 0.3s, box-shadow 0.3s;">
+                        Launch Into Orbit 🚀
+                    </button>
+                </div>
+                <p style="font-size: 1.2em; color: #33d4ff;">Decode the Data. Ignite Curiosity. Build Ocean Literacy 🌍
+                </p>
+            </div>
 
-    <!-- Floating Elements for Visual Impact -->
-    <div style="position: absolute; top: 12%; left: 8%; animation: floatPlanet 12s infinite ease-in-out;">
-        <img src="images/planet_light.png" alt="Planet" style="height: 220px;">
-    </div>
-    <div style="position: absolute; bottom: 8%; right: 12%; animation: spaceshipFly 7s infinite linear;">
-        <img src="images/spaceship_light.png" alt="Spaceship" style="height: 130px;">
-    </div>
+            <!-- Floating Elements for Visual Impact -->
+            <div style="position: absolute; top: 12%; left: 8%; animation: floatPlanet 12s infinite ease-in-out;">
+                <img src="images/PACE.jpg" alt="Planet" style="height: 220px;">
+            </div>
+            <div style="position: absolute; bottom: 8%; right: 12%; animation: spaceshipFly 7s infinite linear;">
+                <img src="images/OBSERVING_EARTH.jpg" alt="Spaceship" style="height: 130px;">
+            </div>
 
-    <!-- Brighter Starfield and Nebula -->
-    <div class="starfield" style="position: absolute; width: 100%; height: 100%; background: url('images/starfield_light.png'); opacity: 0.5; z-index: 0;"></div>
-    <div class="nebula" style="position: absolute; width: 100%; height: 100%; background: url('images/nebula_light.png'); opacity: 0.3; z-index: 0;"></div>
-</section>
+            <!-- Brighter Starfield and Nebula -->
+            <div class="starfield"
+                style="position: absolute; width: 100%; height: 100%; background: url('images/starfield_light.png'); opacity: 0.5; z-index: 0;">
+            </div>
+            <div class="nebula"
+                style="position: absolute; width: 100%; height: 100%; background: url('images/nebula_light.png'); opacity: 0.3; z-index: 0;">
+            </div>
+        </section>
 
-<style>
-    @keyframes floatPlanet {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-30px); }
-        100% { transform: translateY(0); }
-    }
+        <!-- Learn About PACE - Enhanced Space Themed Section Extended -->
+        <section id="learn" class="wrapper style2 space-themed learn-section">
+            <div class="inner">
+                <h2 class="section-title">🌐 NASA PACE 101: What’s This All About?</h2>
+                <div class="content-box floating-box">
+                    <p>NASA's PACE mission is an advanced satellite project that helps us monitor the health of Earth’s
+                        oceans and atmosphere. With cutting-edge technology, we explore how <strong>tiny particles
+                            (aerosols)</strong> and colorful <strong>marine phytoplankton</strong> impact our climate
+                        and ecosystems. The mission offers crucial data to understand our planet’s well-being and to
+                        protect it for future generations. 🌍</p>
+                    <div class="buttons-container">
+                        <button class="cool-btn" onclick="watchVideo()">🌌 Watch Mission Video</button>
+                        <button class="cool-btn" onclick="exploreMore()">🚀 Explore PACE</button>
+                    </div>
+                </div>
+
+                <!-- Infographic Section -->
+                <div class="infographic-section">
+                    <h3 class="infographic-title">📊 How Does NASA PACE Collect Data?</h3>
+                    <p>Explore this infographic to see how NASA's PACE satellite observes Earth's atmosphere and oceans
+                        from space, providing critical data for our planet's future.</p>
+                    <div class="infographic-container">
+                        <img src="images/Info.jpeg" alt="NASA PACE Infographic">
+                    </div>
+                </div>
+
+                <!-- Space Gallery Section -->
+                <div class="space-gallery">
+                    <h3 class="gallery-title">🛰️ NASA PACE Space Gallery</h3>
+                    <div class="gallery-container">
+                        <div class="gallery-item">
+                            <img src="images/LAUNCH.jpg" alt="PACE Satellite Launch">
+                            <p>PACE Satellite Launch 🚀</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/OBSERVING_EARTH.jpg" alt="Observing Earth from Space">
+                            <p>Observing Earth from Space 🌍</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/OCEAN_DATAA.jpg" alt="Ocean Data Collection">
+                            <p>Collecting Ocean Data 🌊</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/ATMOSPHERE.jpg" alt="Atmospheric Observation">
+                            <p>Atmospheric Observations ☁️</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real-Time Space Data Widget -->
+                <div class="real-time-widget">
+                    <h3 class="widget-title">🛰️ Real-Time Space Data</h3>
+                    <p>Keep track of real-time data from the PACE mission. Simulated data includes satellite position,
+                        space weather, and more.</p>
+                    <div class="data-box">
+                        <div class="data-item">
+                            <h4>Satellite Position</h4>
+                            <p>📍 Latitude: 12.1234°N, Longitude: 34.5678°E</p>
+                        </div>
+                        <div class="data-item">
+                            <h4>Space Weather</h4>
+                            <p>☀️ Solar Radiation Index: Moderate</p>
+                        </div>
+                        <div class="data-item">
+                            <h4>Atmospheric Conditions</h4>
+                            <p>☁️ Aerosol Levels: Low</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- JavaScript for Buttons and Data Simulation -->
+        <script>
+            function watchVideo() {
+                window.open("https://youtu.be/dFKJbzTRvZE", "_blank"); // Replace with your video link
+            }
+
+            function exploreMore() {
+                window.open("https://www.nasa.gov/pace", "_blank"); // Replace with your exploration link
+            }
+        </script>
+
+
+        <!-- Fun Facts - Cool Ocean & NASA PACE Facts -->
+        <section id="funfacts" class="wrapper style1 space-themed">
+            <div class="inner">
+                <h2 class="section-title">Cool Ocean & NASA PACE Facts 🌊🛰️</h2>
+                <div class="content-box space-facts">
+
+                    <!-- Fact Card 1 -->
+                    <div class="fact-box glow-card">
+                        <h3><i class="fas fa-globe"></i> Did You Know?</h3>
+                        <p>The ocean covers over 70% of the Earth's surface and produces over half of the world's
+                            oxygen. NASA's PACE mission helps us track ocean health from space!</p>
+                        <button class="cool-btn" onclick="showMore('fact1')">Discover More 🌎</button>
+                        <p id="fact1" class="hidden-fact">NASA’s PACE satellite helps scientists predict climate change
+                            by tracking the ocean's carbon cycle from space!</p>
+                    </div>
+
+                    <!-- Fact Card 2 -->
+                    <div class="fact-box glow-card">
+                        <h3><i class="fas fa-water"></i> Amazing Ocean Life</h3>
+                        <p>The ocean is home to millions of species, and plankton play a key role in regulating the
+                            planet’s climate. NASA PACE studies them from space to understand their global impact.</p>
+                        <button class="cool-btn" onclick="showMore('fact2')">Explore the Depths 🐋</button>
+                        <p id="fact2" class="hidden-fact">Plankton absorb as much CO₂ as all the forests on land
+                            combined. PACE tracks these "tiny climate heroes" from orbit!</p>
+                    </div>
+
+                    <!-- Fact Card 3 -->
+                    <div class="fact-box glow-card">
+                        <h3><i class="fas fa-mountain"></i> The Deep Blue</h3>
+                        <p>The Mariana Trench is the deepest point on Earth, but ocean mysteries aren't limited to the
+                            deep. NASA PACE uncovers secrets in ocean chemistry and color from above!</p>
+                        <button class="cool-btn" onclick="showMore('fact3')">Dive Deeper 🌊</button>
+                        <p id="fact3" class="hidden-fact">PACE's sensors can detect harmful algal blooms from space,
+                            helping protect both marine life and human health.</p>
+                    </div>
+
+                    <!-- Fact Card 4 -->
+                    <div class="fact-box glow-card">
+                        <h3><i class="fas fa-palette"></i> Colorful Oceans</h3>
+                        <p>The ocean can appear blue, green, or even red, depending on what's in the water. NASA PACE
+                            studies these changes to monitor the health of marine ecosystems from orbit.</p>
+                        <button class="cool-btn" onclick="showMore('fact4')">See the Colors 🌈</button>
+                        <p id="fact4" class="hidden-fact">By tracking ocean color changes, PACE helps scientists study
+                            pollution and coral reef bleaching. 🌊✨</p>
+                    </div>
+
+                    <!-- Fact Card 5 -->
+                    <div class="fact-box glow-card">
+                        <h3><i class="fas fa-rocket"></i> NASA PACE & You</h3>
+                        <p>NASA’s PACE mission offers opportunities for students to get involved. From tracking aerosols
+                            to studying plankton’s role in climate, there's a role for young scientists!</p>
+                        <button class="cool-btn" onclick="showMore('fact5')">Get Involved 🔬</button>
+                        <p id="fact5" class="hidden-fact">Explore free NASA resources and citizen science projects to
+                            start contributing to real-world research today! 🌍🚀</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- AI Chatbot Section -->
+            <div id="ai-chatbot" class="chatbot-container">
+                <h2 class="section-title cool-title">🌌 Ask AI for Learning & Help 🤖💫</h2>
+                <div class="chatbox" id="chatbox">
+                    <div class="chat-header">
+                        <h3>🚀 SpaceBot 🌌</h3>
+                        <p>Ask me anything about NASA PACE, oceans, or space science!</p>
+                    </div>
+                    <div class="chat-output" id="chat-output">
+                        <p class="bot-message">Hello, I’m SpaceBot! 🚀 How can I assist you today?</p>
+                    </div>
+                    <div class="chat-input-box">
+                        <input type="text" id="user-input" placeholder="Type your question here..." />
+                        <button class="send-btn" onclick="sendMessage()">Send 🛰️</button>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    </section>
+
+    <!-- JavaScript for Chat Functionality -->
+    <!-- groq key: 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 -->
+
+    <script>
+        const API_URL = 'https://api.groq.com/v1/models/gemma-7b-it/chat'; // Your Groq API endpoint
+        const API_KEY = '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'; // Your API key
     
-    @keyframes spaceshipFly {
-        0% { transform: translateX(0) rotate(0deg); }
-        50% { transform: translateX(-20px) rotate(5deg); }
-        100% { transform: translateX(0) rotate(0deg); }
-    }
-</style>
-
-<!-- Learn About PACE - Enhanced Space Themed Section Extended -->
-<section id="learn" class="wrapper style2 space-themed learn-section">
-    <div class="inner">
-        <h2 class="section-title">🌐 NASA PACE 101: What’s This All About?</h2>
-        <div class="content-box floating-box">
-            <p>NASA's PACE mission is an advanced satellite project that helps us monitor the health of Earth’s oceans and atmosphere. With cutting-edge technology, we explore how <strong>tiny particles (aerosols)</strong> and colorful <strong>marine phytoplankton</strong> impact our climate and ecosystems. The mission offers crucial data to understand our planet’s well-being and to protect it for future generations. 🌍</p>
-            <div class="buttons-container">
-                <button class="cool-btn" onclick="watchVideo()">🌌 Watch Mission Video</button>
-                <button class="cool-btn" onclick="exploreMore()">🚀 Explore PACE</button>
-            </div>
-        </div>
-
-        <!-- Infographic Section -->
-        <div class="infographic-section">
-            <h3 class="infographic-title">📊 How Does NASA PACE Collect Data?</h3>
-            <p>Explore this infographic to see how NASA's PACE satellite observes Earth's atmosphere and oceans from space, providing critical data for our planet's future.</p>
-            <div class="infographic-container">
-                <img src="https://github.com/Bushrahhh/OribtinPACE/blob/main/images/Info.jpeg" alt="NASA PACE Infographic">
-            </div>
-        </div>
-
-        <!-- Space Gallery Section -->
-        <div class="space-gallery">
-            <h3 class="gallery-title">🛰️ NASA PACE Space Gallery</h3>
-            <div class="gallery-container">
-                <div class="gallery-item">
-                    <img src="path/to/image1.jpg" alt="PACE Satellite Launch">
-                    <p>PACE Satellite Launch 🚀</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="path/to/image2.jpg" alt="Observing Earth from Space">
-                    <p>Observing Earth from Space 🌍</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="path/to/image3.jpg" alt="Ocean Data Collection">
-                    <p>Collecting Ocean Data 🌊</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://github.com/Bushrahhh/OribtinPACE/blob/main/images/ATMOSPHERE.jpg" alt="Atmospheric Observation">
-                    <p>Atmospheric Observations ☁️</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Real-Time Space Data Widget -->
-        <div class="real-time-widget">
-            <h3 class="widget-title">🛰️ Real-Time Space Data</h3>
-            <p>Keep track of real-time data from the PACE mission. Simulated data includes satellite position, space weather, and more.</p>
-            <div class="data-box">
-                <div class="data-item">
-                    <h4>Satellite Position</h4>
-                    <p>📍 Latitude: 12.1234°N, Longitude: 34.5678°E</p>
-                </div>
-                <div class="data-item">
-                    <h4>Space Weather</h4>
-                    <p>☀️ Solar Radiation Index: Moderate</p>
-                </div>
-                <div class="data-item">
-                    <h4>Atmospheric Conditions</h4>
-                    <p>☁️ Aerosol Levels: Low</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CSS for New Sections -->
-<style>
-    /* Infographic Section */
-    .infographic-section {
-        margin-top: 50px;
-        text-align: center;
-    }
-
-    .infographic-title {
-        font-size: 2.5rem;
-        color: #00d4ff;
-        margin-bottom: 30px;
-    }
-
-    .infographic-container img {
-        max-width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0, 196, 255, 0.4);
-    }
-
-    /* Space Gallery Section */
-    .space-gallery {
-        margin-top: 50px;
-        text-align: center;
-    }
-
-    .gallery-title {
-        font-size: 2.5rem;
-        color: #00ff80;
-        margin-bottom: 30px;
-    }
-
-    .gallery-container {
-        display: flex;
-        overflow-x: auto;
-        gap: 20px;
-    }
-
-    .gallery-item {
-        flex-shrink: 0;
-        width: 200px;
-        text-align: center;
-    }
-
-    .gallery-item img {
-        max-width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0, 196, 255, 0.4);
-    }
-
-    .gallery-item p {
-        margin-top: 10px;
-        font-size: 1.1rem;
-        color: #00d4ff;
-    }
-
-    /* Real-Time Space Data Widget */
-    .real-time-widget {
-        margin-top: 50px;
-        text-align: center;
-    }
-
-    .widget-title {
-        font-size: 2.5rem;
-        color: #00ff80;
-        margin-bottom: 30px;
-    }
-
-    .data-box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-    }
-
-    .data-item {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 20px;
-        border-radius: 10px;
-        width: 200px;
-        text-align: center;
-        box-shadow: 0 5px 20px rgba(0, 196, 255, 0.4);
-        transition: transform 0.3s;
-    }
-
-    .data-item:hover {
-        transform: scale(1.05);
-    }
-</style>
-
-<!-- JavaScript for Buttons and Data Simulation -->
-<script>
-    function watchVideo() {
-        window.open("https://youtu.be/dFKJbzTRvZE", "_blank"); // Replace with your video link
-    }
-
-    function exploreMore() {
-        window.open("https://www.nasa.gov/pace", "_blank"); // Replace with your exploration link
-    }
-</script>
-
-
-<!-- Fun Facts - Cool Ocean & NASA PACE Facts -->
-<section id="funfacts" class="wrapper style1 space-themed">
-    <div class="inner">
-        <h2 class="section-title">Cool Ocean & NASA PACE Facts 🌊🛰️</h2>
-        <div class="content-box space-facts">
-
-            <!-- Fact Card 1 -->
-            <div class="fact-box glow-card">
-                <h3><i class="fas fa-globe"></i> Did You Know?</h3>
-                <p>The ocean covers over 70% of the Earth's surface and produces over half of the world's oxygen. NASA's PACE mission helps us track ocean health from space!</p>
-                <button class="cool-btn" onclick="showMore('fact1')">Discover More 🌎</button>
-                <p id="fact1" class="hidden-fact">NASA’s PACE satellite helps scientists predict climate change by tracking the ocean's carbon cycle from space!</p>
-            </div>
-
-            <!-- Fact Card 2 -->
-            <div class="fact-box glow-card">
-                <h3><i class="fas fa-water"></i> Amazing Ocean Life</h3>
-                <p>The ocean is home to millions of species, and plankton play a key role in regulating the planet’s climate. NASA PACE studies them from space to understand their global impact.</p>
-                <button class="cool-btn" onclick="showMore('fact2')">Explore the Depths 🐋</button>
-                <p id="fact2" class="hidden-fact">Plankton absorb as much CO₂ as all the forests on land combined. PACE tracks these "tiny climate heroes" from orbit!</p>
-            </div>
-
-            <!-- Fact Card 3 -->
-            <div class="fact-box glow-card">
-                <h3><i class="fas fa-mountain"></i> The Deep Blue</h3>
-                <p>The Mariana Trench is the deepest point on Earth, but ocean mysteries aren't limited to the deep. NASA PACE uncovers secrets in ocean chemistry and color from above!</p>
-                <button class="cool-btn" onclick="showMore('fact3')">Dive Deeper 🌊</button>
-                <p id="fact3" class="hidden-fact">PACE's sensors can detect harmful algal blooms from space, helping protect both marine life and human health.</p>
-            </div>
-
-            <!-- Fact Card 4 -->
-            <div class="fact-box glow-card">
-                <h3><i class="fas fa-palette"></i> Colorful Oceans</h3>
-                <p>The ocean can appear blue, green, or even red, depending on what's in the water. NASA PACE studies these changes to monitor the health of marine ecosystems from orbit.</p>
-                <button class="cool-btn" onclick="showMore('fact4')">See the Colors 🌈</button>
-                <p id="fact4" class="hidden-fact">By tracking ocean color changes, PACE helps scientists study pollution and coral reef bleaching. 🌊✨</p>
-            </div>
-
-            <!-- Fact Card 5 -->
-            <div class="fact-box glow-card">
-                <h3><i class="fas fa-rocket"></i> NASA PACE & You</h3>
-                <p>NASA’s PACE mission offers opportunities for students to get involved. From tracking aerosols to studying plankton’s role in climate, there's a role for young scientists!</p>
-                <button class="cool-btn" onclick="showMore('fact5')">Get Involved 🔬</button>
-                <p id="fact5" class="hidden-fact">Explore free NASA resources and citizen science projects to start contributing to real-world research today! 🌍🚀</p>
-            </div>
-
-        </div>
-    </div>
-
-<!-- AI Chatbot Section -->
-<div id="ai-chatbot" class="chatbot-container">
-    <h2 class="section-title cool-title">🌌 Ask AI for Learning & Help 🤖💫</h2>
-    <div class="chatbox" id="chatbox">
-        <div class="chat-header">
-            <h3>🚀 SpaceBot 🌌</h3>
-            <p>Ask me anything about NASA PACE, oceans, or space science!</p>
-        </div>
-        <div class="chat-output" id="chat-output">
-            <p class="bot-message">Hello, I’m SpaceBot! 🚀 How can I assist you today?</p>
-        </div>
-        <div class="chat-input-box">
-            <input type="text" id="user-input" placeholder="Type your question here..." />
-            <button class="send-btn" onclick="sendMessage()">Send 🛰️</button>
-        </div>
-    </div>
-</div>
-
-</div>
-</section>
-
-<!-- Add this CSS to style the chatbot section -->
-<style>
-/* Chatbot Container */
-.chatbot-container {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Center vertically */
-    margin-top: 20px;
-    padding: 20px;
-    flex-direction: column; /* Stack items vertically */
-}
-
-/* Chatbox Design */
-.chatbox {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 25px; /* Increased padding for a spacious feel */
-    border-radius: 15px;
-    width: 450px; /* Expanded width for the chatbox */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    position: relative;
-}
-
-/* Title Styling */
-.cool-title {
-    color: #00d4ff;
-    font-family: 'Lucida Console', Monaco, monospace; /* Use a cooler font */
-    font-size: 2.2rem; /* Increased font size for emphasis */
-    text-align: center;
-    margin-bottom: 15px; /* Space between title and chatbox */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
-}
-
-/* Chat Header */
-.chat-header {
-    text-align: center;
-    padding: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.chat-header h3 {
-    color: #00d4ff;
-    font-size: 2rem; /* Increased font size */
-    margin-bottom: 5px;
-    font-family: 'Lucida Console', Monaco, monospace; /* Use a cooler font */
-}
-
-.chat-header p {
-    font-size: 1.1rem; /* Slightly larger for better readability */
-    color: #ccc;
-}
-
-/* Chat Output */
-.chat-output {
-    height: 250px; /* Increased height for more messages */
-    overflow-y: auto;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-.bot-message {
-    color: #00d4ff;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 8px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.user-message {
-    color: #090979;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 8px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    text-align: right;
-}
-
-/* Chat Input Box */
-.chat-input-box {
-    display: flex;
-    margin-top: 10px;
-}
-
-.chat-input-box input {
-    width: 80%;
-    padding: 10px;
-    border: none;
-    border-radius: 10px 0 0 10px;
-    outline: none;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.send-btn {
-    width: 20%;
-    border: none;
-    padding: 10px;
-    border-radius: 0 10px 10px 0;
-    cursor: pointer;
-    background: #00d4ff;
-    color: #020024;
-    font-size: 1.2rem;
-}
-
-.send-btn:hover {
-    background: #00a1ff;
-    color: #fff;
-}
-</style>
-
-<!-- JavaScript for Chat Functionality -->
-<script>
-function sendMessage() {
-    var userInput = document.getElementById("user-input").value;
-    if (userInput.trim() === "") return;
-
-    var chatOutput = document.getElementById("chat-output");
+        async function sendMessage() {
+            var userInput = document.getElementById("user-input").value;
+            if (userInput.trim() === "") return;
     
-    // Display User Message
-    var userMessage = document.createElement("p");
-    userMessage.className = "user-message";
-    userMessage.innerText = userInput;
-    chatOutput.appendChild(userMessage);
+            var chatOutput = document.getElementById("chat-output");
     
-    // Clear Input
-    document.getElementById("user-input").value = "";
-
-    // Simulated Bot Response
-    var botMessage = document.createElement("p");
-    botMessage.className = "bot-message";
-    botMessage.innerText = "Great question! I'm still learning, but you can explore more on the NASA PACE website.";
-    setTimeout(() => chatOutput.appendChild(botMessage), 1000);
-
-    // Scroll to the latest message
-    chatOutput.scrollTop = chatOutput.scrollHeight;
-}
-</script>
-
-</section>
-
-<!-- Add this CSS to style the new look -->
-<style>
-    /* Space-Themed Background */
-    .space-themed {
-        background: linear-gradient(135deg, #020024, #090979, #00d4ff);
-        color: #fff;
-        padding: 50px 20px;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        font-family: 'Space Mono', monospace;
-    }
-
-    /* Section Title */
-    .section-title {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-        letter-spacing: 2px;
-    }
-
-    /* Spacey Fact Box Design */
-    .fact-box {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        text-align: center;
-        transition: transform 0.3s ease;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .fact-box:hover {
-        transform: scale(1.05);
-    }
-
-    /* Glowing Effect for Cards */
-    .glow-card {
-        border: none;
-        box-shadow: 0px 0px 15px 4px rgba(0, 196, 255, 0.75);
-    }
-
-    /* Button Design */
-    .cool-btn {
-        background: #00d4ff;
-        color: #020024;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 30px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background 0.3s ease;
-        margin-top: 10px;
-    }
-
-    .cool-btn:hover {
-        background: #00a1ff;
-        color: #fff;
-    }
-
-    /* Hidden Fact Styling */
-    .hidden-fact {
-        display: none;
-        margin-top: 10px;
-        font-size: 0.9rem;
-        color: #fff;
-    }
-
-    /* Show Hidden Fact */
-    .fact-box button:active + .hidden-fact {
-        display: block;
-    }
-
-    /* Add Space Icons */
-    .fact-box h3 i {
-        margin-right: 10px;
-        color: #00d4ff;
-    }
-</style>
-
-<!-- JavaScript for Show More Buttons -->
-<script>
-    function showMore(id) {
-        var x = document.getElementById(id);
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
+            // Display User Message
+            var userMessage = document.createElement("p");
+            userMessage.className = "user-message";
+            userMessage.innerText = userInput;
+            chatOutput.appendChild(userMessage);
+    
+            // Clear Input
+            document.getElementById("user-input").value = "";
+    
+            // Display loading message
+            var loadingMessage = document.createElement("p");
+            loadingMessage.className = "bot-message";
+            loadingMessage.innerText = "SpaceBot is thinking... 🤔";
+            chatOutput.appendChild(loadingMessage);
+    
+            // Fetch API Response
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${API_KEY}`
+                    },
+                    body: JSON.stringify({ prompt: userInput }) // Change 'question' to 'prompt'
+                });
+    
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+    
+                const data = await response.json();
+                console.log(data); // Log the full response for debugging
+    
+                // Check how the response is structured
+                const botResponse = data.response || data.answer || "I'm not sure how to answer that. Can you ask something else?";
+    
+                // Replace loading message with bot response
+                chatOutput.removeChild(loadingMessage);
+    
+                var botMessage = document.createElement("p");
+                botMessage.className = "bot-message";
+                botMessage.innerText = botResponse;
+                chatOutput.appendChild(botMessage);
+            } catch (error) {
+                console.error('Error fetching response:', error);
+                loadingMessage.innerText = "Sorry, I couldn't fetch an answer right now.";
+                // Log detailed error response if available
+                if (error.response) {
+                    const errorData = await error.response.json();
+                    console.error('Error details:', errorData); // Log the detailed error response
+                }
+            }
+    
+            // Scroll to the latest message
+            chatOutput.scrollTop = chatOutput.scrollHeight;
         }
-    }
-
-	
-</script>
+    </script>
+    
 
 
-       <!-- Quiz Section -->
-<section id="quiz" class="wrapper style2 quiz-section">
-    <div class="inner">
-        <h2>Take the Quiz 🎮</h2>
-        <form id="quiz-form">
-            <!-- Question 1 -->
-            <div class="quiz-question">
-                <h3>1. What percentage of the Earth's surface is covered by the ocean?</h3>
-                <div class="quiz-options">
-                    <input type="radio" id="q1a" name="q1" value="50">
-                    <label for="q1a">50%</label>
-                    <input type="radio" id="q1b" name="q1" value="70">
-                    <label for="q1b">70%</label>
-                    <input type="radio" id="q1c" name="q1" value="90">
-                    <label for="q1c">90%</label>
-                </div>
-            </div>
-            <!-- Question 2 -->
-            <div class="quiz-question">
-                <h3>2. What is the deepest part of the world's oceans?</h3>
-                <div class="quiz-options">
-                    <input type="radio" id="q2a" name="q2" value="Mariana Trench">
-                    <label for="q2a">Mariana Trench</label>
-                    <input type="radio" id="q2b" name="q2" value="Tonga Trench">
-                    <label for="q2b">Tonga Trench</label>
-                    <input type="radio" id="q2c" name="q2" value="Java Trench">
-                    <label for="q2c">Java Trench</label>
-                </div>
-            </div>
-            <!-- Question 3 -->
-            <div class="quiz-question">
-                <h3>3. What color does the ocean mostly appear and why?</h3>
-                <div class="quiz-options">
-                    <input type="radio" id="q3a" name="q3" value="Red, due to marine life">
-                    <label for="q3a">Red, due to marine life</label>
-                    <input type="radio" id="q3b" name="q3" value="Blue, due to light absorption">
-                    <label for="q3b">Blue, due to light absorption</label>
-                    <input type="radio" id="q3c" name="q3" value="Green, due to algae">
-                    <label for="q3c">Green, due to algae</label>
-                </div>
-            </div>
-            <!-- New Question 4 -->
-            <div class="quiz-question">
-                <h3>4. What is the main objective of NASA's PACE mission?</h3>
-                <div class="quiz-options">
-                    <input type="radio" id="q4a" name="q4" value="To monitor climate change and its effects on the atmosphere">
-                    <label for="q4a">To monitor climate change and its effects on the atmosphere</label>
-                    <input type="radio" id="q4b" name="q4" value="To study ocean health, ecosystems, and biodiversity">
-                    <label for="q4b">To study ocean health, ecosystems, and biodiversity</label>
-                    <input type="radio" id="q4c" name="q4" value="To explore deep space and search for exoplanets">
-                    <label for="q4c">To explore deep space and search for exoplanets</label>
-                </div>
-            </div>
-            <!-- New Question 5 -->
-            <div class="quiz-question">
-                <h3>5. What does the acronym PACE in NASA's PACE mission stand for?</h3>
-                <div class="quiz-options">
-                    <input type="radio" id="q5a" name="q5" value="Polar Aerosol Climate Explorer">
-                    <label for="q5a">Polar Aerosol Climate Explorer</label>
-                    <input type="radio" id="q5b" name="q5" value="Plankton, Aerosol, Cloud, ocean Ecosystem">
-                    <label for="q5b">Plankton, Aerosol, Cloud, ocean Ecosystem</label>
-                    <input type="radio" id="q5c" name="q5" value="Planetary Atmosphere and Cloud Examination">
-                    <label for="q5c">Planetary Atmosphere and Cloud Examination</label>
-                </div>
-            </div>
-            <button type="button" class="animated-button" onclick="submitQuiz()">Submit Answers</button>
-        </form>
-        <div id="quiz-result" class="score-display"></div>
-    </div>
-</section>
 
-<!-- Footer -->
-<footer class="footer">
-    <p>&copy; 2024 NASA PACE. All rights reserved.</p>
-</footer>
+    </section>
 
-<script>
-    function submitQuiz() {
-        const answers = {
-            q1: '70',
-            q2: 'Mariana Trench',
-            q3: 'Blue, due to light absorption',
-            q4: 'To study ocean health, ecosystems, and biodiversity',
-            q5: 'Plankton, Aerosol, Cloud, ocean Ecosystem'
-        };
+    <!-- Add this CSS to style the new look -->
+    <style>
+        /* Space-Themed Background */
+        .space-themed {
+            background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+            color: #fff;
+            padding: 50px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            font-family: 'Space Mono', monospace;
+        }
 
-        let score = 0;
-        const form = document.forms['quiz-form'];
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
 
-        for (const question in answers) {
-            const userAnswer = form[question].value;
-            if (userAnswer === answers[question]) {
-                score++;
+        /* Spacey Fact Box Design */
+        .fact-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .fact-box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Glowing Effect for Cards */
+        .glow-card {
+            border: none;
+            box-shadow: 0px 0px 15px 4px rgba(0, 196, 255, 0.75);
+        }
+
+        /* Button Design */
+        .cool-btn {
+            background: #00d4ff;
+            color: #020024;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .cool-btn:hover {
+            background: #00a1ff;
+            color: #fff;
+        }
+
+        /* Hidden Fact Styling */
+        .hidden-fact {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        /* Show Hidden Fact */
+        .fact-box button:active+.hidden-fact {
+            display: block;
+        }
+
+        /* Add Space Icons */
+        .fact-box h3 i {
+            margin-right: 10px;
+            color: #00d4ff;
+        }
+    </style>
+
+    <!-- JavaScript for Show More Buttons -->
+    <script>
+        function showMore(id) {
+            var x = document.getElementById(id);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
             }
         }
 
-        const resultDiv = document.getElementById('quiz-result');
-        resultDiv.innerHTML = `<span class="emoji">🎉</span> You scored ${score}/5! ${score === 5 ? 'You are an ocean and NASA PACE expert! 🌊' : 'Keep learning and exploring! 🌍'}`;
-    }
-</script>
+
+    </script>
+
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="wrapper style2 quiz-section">
+        <div class="inner">
+            <h2>Take the Quiz 🎮</h2>
+            <form id="quiz-form">
+                <!-- Question 1 -->
+                <div class="quiz-question">
+                    <h3>1. What percentage of the Earth's surface is covered by the ocean?</h3>
+                    <div class="quiz-options">
+                        <input type="radio" id="q1a" name="q1" value="50">
+                        <label for="q1a">50%</label>
+                        <input type="radio" id="q1b" name="q1" value="70">
+                        <label for="q1b">70%</label>
+                        <input type="radio" id="q1c" name="q1" value="90">
+                        <label for="q1c">90%</label>
+                    </div>
+                </div>
+                <!-- Question 2 -->
+                <div class="quiz-question">
+                    <h3>2. What is the deepest part of the world's oceans?</h3>
+                    <div class="quiz-options">
+                        <input type="radio" id="q2a" name="q2" value="Mariana Trench">
+                        <label for="q2a">Mariana Trench</label>
+                        <input type="radio" id="q2b" name="q2" value="Tonga Trench">
+                        <label for="q2b">Tonga Trench</label>
+                        <input type="radio" id="q2c" name="q2" value="Java Trench">
+                        <label for="q2c">Java Trench</label>
+                    </div>
+                </div>
+                <!-- Question 3 -->
+                <div class="quiz-question">
+                    <h3>3. What color does the ocean mostly appear and why?</h3>
+                    <div class="quiz-options">
+                        <input type="radio" id="q3a" name="q3" value="Red, due to marine life">
+                        <label for="q3a">Red, due to marine life</label>
+                        <input type="radio" id="q3b" name="q3" value="Blue, due to light absorption">
+                        <label for="q3b">Blue, due to light absorption</label>
+                        <input type="radio" id="q3c" name="q3" value="Green, due to algae">
+                        <label for="q3c">Green, due to algae</label>
+                    </div>
+                </div>
+                <!-- New Question 4 -->
+                <div class="quiz-question">
+                    <h3>4. What is the main objective of NASA's PACE mission?</h3>
+                    <div class="quiz-options">
+                        <input type="radio" id="q4a" name="q4"
+                            value="To monitor climate change and its effects on the atmosphere">
+                        <label for="q4a">To monitor climate change and its effects on the atmosphere</label>
+                        <input type="radio" id="q4b" name="q4"
+                            value="To study ocean health, ecosystems, and biodiversity">
+                        <label for="q4b">To study ocean health, ecosystems, and biodiversity</label>
+                        <input type="radio" id="q4c" name="q4" value="To explore deep space and search for exoplanets">
+                        <label for="q4c">To explore deep space and search for exoplanets</label>
+                    </div>
+                </div>
+                <!-- New Question 5 -->
+                <div class="quiz-question">
+                    <h3>5. What does the acronym PACE in NASA's PACE mission stand for?</h3>
+                    <div class="quiz-options">
+                        <input type="radio" id="q5a" name="q5" value="Polar Aerosol Climate Explorer">
+                        <label for="q5a">Polar Aerosol Climate Explorer</label>
+                        <input type="radio" id="q5b" name="q5" value="Plankton, Aerosol, Cloud, ocean Ecosystem">
+                        <label for="q5b">Plankton, Aerosol, Cloud, ocean Ecosystem</label>
+                        <input type="radio" id="q5c" name="q5" value="Planetary Atmosphere and Cloud Examination">
+                        <label for="q5c">Planetary Atmosphere and Cloud Examination</label>
+                    </div>
+                </div>
+                <button type="button" class="animated-button" onclick="submitQuiz()">Submit Answers</button>
+            </form>
+            <div id="quiz-result" class="score-display"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 NASA PACE. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function submitQuiz() {
+            const answers = {
+                q1: '70',
+                q2: 'Mariana Trench',
+                q3: 'Blue, due to light absorption',
+                q4: 'To study ocean health, ecosystems, and biodiversity',
+                q5: 'Plankton, Aerosol, Cloud, ocean Ecosystem'
+            };
+
+            let score = 0;
+            const form = document.forms['quiz-form'];
+
+            for (const question in answers) {
+                const userAnswer = form[question].value;
+                if (userAnswer === answers[question]) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById('quiz-result');
+            resultDiv.innerHTML = `<span class="emoji">🎉</span> You scored ${score}/5! ${score === 5 ? 'You are an ocean and NASA PACE expert! 🌊' : 'Keep learning and exploring! 🌍'}`;
+        }
+    </script>
 
 </body>
+
 </html>
