@@ -184,7 +184,7 @@
                     OrbitinPACE 🌌
                 </h1>
                 <p style="font-size: 1.6em; margin-top: 10px; color: #e8eaff;">
-                    Learn the PACE of the Space with AI 🛰️—Transform NASA’s data into stories that light up classrooms!
+                    Learn the PACE of the Space with AI 🛰—Transform NASA’s data into stories that light up classrooms!
                     🚀 Dive into oceans, decode clouds, and explore Earth’s atmosphere in a way that’s never been seen
                     before.
                 </p>
@@ -253,7 +253,7 @@
 
         <!-- Space Gallery Section -->
         <div class="space-gallery">
-            <h3 class="gallery-title">🛰️ NASA PACE Space Gallery</h3>
+            <h3 class="gallery-title">🛰 NASA PACE Space Gallery</h3>
             <div class="gallery-container">
                 <div class="gallery-item">
                     <img src="path/to/image1.jpg" alt="PACE Satellite Launch">
@@ -269,14 +269,14 @@
                 </div>
                 <div class="gallery-item">
                     <img src="https://github.com/Bushrahhh/OribtinPACE/blob/main/images/ATMOSPHERE.jpg" alt="Atmospheric Observation">
-                    <p>Atmospheric Observations ☁️</p>
+                    <p>Atmospheric Observations ☁</p>
                 </div>
             </div>
         </div>
 
                 <!-- Real-Time Space Data Widget -->
                 <div class="real-time-widget">
-                    <h3 class="widget-title">🛰️ Real-Time Space Data</h3>
+                    <h3 class="widget-title">🛰 Real-Time Space Data</h3>
                     <p>Keep track of real-time data from the PACE mission. Simulated data includes satellite position,
                         space weather, and more.</p>
                     <div class="data-box">
@@ -286,11 +286,11 @@
                         </div>
                         <div class="data-item">
                             <h4>Space Weather</h4>
-                            <p>☀️ Solar Radiation Index: Moderate</p>
+                            <p>☀ Solar Radiation Index: Moderate</p>
                         </div>
                         <div class="data-item">
                             <h4>Atmospheric Conditions</h4>
-                            <p>☁️ Aerosol Levels: Low</p>
+                            <p>☁ Aerosol Levels: Low</p>
                         </div>
                     </div>
                 </div>
@@ -402,7 +402,7 @@
         <!-- Fun Facts - Cool Ocean & NASA PACE Facts -->
         <section id="funfacts" class="wrapper style1 space-themed">
             <div class="inner">
-                <h2 class="section-title">Cool Ocean & NASA PACE Facts 🌊🛰️</h2>
+                <h2 class="section-title">Cool Ocean & NASA PACE Facts 🌊🛰</h2>
                 <div class="content-box space-facts">
 
                     <!-- Fact Card 1 -->
@@ -471,7 +471,10 @@
                     </div>
                     <div class="chat-input-box">
                         <input type="text" id="user-input" placeholder="Type your question here..." />
-                        <button class="send-btn" onclick="sendMessage()">Send 🛰️</button>
+                        <button class="send-btn" onclick="sendMessage()">Send 🛰</button>
+                    </div>
+                    <div id="loading-indicator" class="loading-indicator" style="display: none;">
+                        Thinking... 🤔
                     </div>
                 </div>
             </div>
@@ -591,15 +594,23 @@
     background: #00a1ff;
     color: #fff;
 }
+
+.loading-indicator {
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+    color: #00d4ff;
+}
 </style>
 
 <!-- JavaScript for Chat Functionality -->
 <script>
-function sendMessage() {
+async function sendMessage() {
     var userInput = document.getElementById("user-input").value;
     if (userInput.trim() === "") return;
 
     var chatOutput = document.getElementById("chat-output");
+    var loadingIndicator = document.getElementById("loading-indicator");
     
     // Display User Message
     var userMessage = document.createElement("p");
@@ -610,14 +621,54 @@ function sendMessage() {
     // Clear Input
     document.getElementById("user-input").value = "";
 
-    // Simulated Bot Response
-    var botMessage = document.createElement("p");
-    botMessage.className = "bot-message";
-    botMessage.innerText = "Great question! I'm still learning, but you can explore more on the NASA PACE website.";
-    setTimeout(() => chatOutput.appendChild(botMessage), 1000);
+    // Show loading indicator
+    loadingIndicator.style.display = "block";
 
-    // Scroll to the latest message
-    chatOutput.scrollTop = chatOutput.scrollHeight;
+    try {
+        const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer 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',
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            mode: 'cors',
+            cache: 'no-cache',
+            credentials: 'same-origin',
+            body: JSON.stringify({
+                model: "llama3-8b-8192",
+                messages: [
+                    {role: "system", content: "You are a helpful assistant knowledgeable about NASA's PACE mission, oceans, and space science."},
+                    {role: "user", content: userInput}
+                ],
+                max_tokens: 150
+            }),
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
+        }
+
+        const data = await response.json();
+
+        // Display Bot Message
+        var botMessage = document.createElement("p");
+        botMessage.className = "bot-message";
+        botMessage.innerText = data.choices[0].message.content;
+        chatOutput.appendChild(botMessage);
+    } catch (error) {
+        console.error('Error:', error);
+        var errorMessage = document.createElement("p");
+        errorMessage.className = "bot-message";
+        errorMessage.innerText = `Error details: ${error.message}`;
+        chatOutput.appendChild(errorMessage);
+    } finally {
+        // Hide loading indicator
+        loadingIndicator.style.display = "none";
+        // Scroll to the latest message
+        chatOutput.scrollTop = chatOutput.scrollHeight;
+    }
 }
 </script>
 
