@@ -11,7 +11,7 @@ app.use(express.json());
 app.post('/api/chat', async (req, res) => {
     try {
       const response = await axios.post('https://api.groq.com/openai/v1/chat/completions', {
-        model: "llama3-8b-8192",
+        model: "llama3-70b-8192",
         messages: [
           { role: "system", content: "You are a helpful assistant knowledgeable about NASA's PACE mission, oceans, and space science." },
           { role: "user", content: req.body.message }
