@@ -7,9 +7,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Poppins:wght@600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0e1117;
+            color: #ffffff;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, p {
+            text-align: center;
+            margin: 0;
+        }
+        .hero-section {
+            background-image: url('https://raw.githubusercontent.com/Bushrahhh/OribtinPACE/refs/heads/main/images/PLANET.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            color: #ffffff;
+            text-shadow: 2px 2px #000;
+            position: relative;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            animation: neon-flicker 1.5s infinite;
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        .button {
+            background-color: #ff6b6b;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+        .button:hover {
+            transform: scale(1.05);
+        }
+        section {
+            padding: 50px 20px;
+        }
+        .content-box {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .fact-box {
+            background: #1c1f26;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 10px;
+            width: 45%;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .fact-box:hover {
+            transform: scale(1.05);
+            background-color: #2d3748;
+        }
+        .fact-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ffeb3b;
+        }
+        .fact-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        .quiz-section {
+            background-color: #333a45;
+            color: white;
+            padding: 50px;
+            border-radius: 25px;
+            text-align: left;
+        }
+        .quiz-section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .quiz-question {
+            margin: 20px 0;
+        }
+        .quiz-options label {
+            display: block;
+            background-color: #2c313c;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .quiz-options input {
+            display: none;
+        }
+        .quiz-options input:checked + label {
+            background-color: #4caf50;
+        }
+        .quiz-options label:hover {
+            background-color: #3e4451;
+        }
+        .animated-button {
+            background-color: #3b82f6;
+            border: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.2s, background-color 0.3s;
+            display: block;
+            margin: 20px auto;
+        }
+        .animated-button:hover {
+            transform: scale(1.1);
+            background-color: #2563eb;
+        }
+        .footer {
+            background-color: #0e1117;
+            color: #f6f6f6;
+            padding: 20px;
+            text-align: center;
+        }
+        .score-display {
+            font-size: 1.5rem;
+            background-color: #ff6b6b;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .emoji {
+            font-size: 1.8rem;
+            margin-right: 8px;
+        }
+        @keyframes neon-flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+    </style>
 </head>
 
 <body>
@@ -54,22 +199,32 @@
                 </p>
             </div>
 
-            <!-- Floating Elements for Visual Impact -->
-            <div style="position: absolute; top: 12%; left: 8%; animation: floatPlanet 12s infinite ease-in-out;">
-                <img src="images/PACE.jpg" alt="Planet" style="height: 220px;">
-            </div>
-            <div style="position: absolute; bottom: 8%; right: 12%; animation: spaceshipFly 7s infinite linear;">
-                <img src="images/OBSERVING_EARTH.jpg" alt="Spaceship" style="height: 130px;">
-            </div>
+    <!-- Floating Elements for Visual Impact -->
+    <div style="position: absolute; top: 12%; left: 8%; animation: floatPlanet 12s infinite ease-in-out;">
+        <img src="images/planet_light.png" alt="Planet" style="height: 220px;">
+    </div>
+    <div style="position: absolute; bottom: 8%; right: 12%; animation: spaceshipFly 7s infinite linear;">
+        <img src="images/spaceship_light.png" alt="Spaceship" style="height: 130px;">
+    </div>
 
-            <!-- Brighter Starfield and Nebula -->
-            <div class="starfield"
-                style="position: absolute; width: 100%; height: 100%; background: url('images/starfield_light.png'); opacity: 0.5; z-index: 0;">
-            </div>
-            <div class="nebula"
-                style="position: absolute; width: 100%; height: 100%; background: url('images/nebula_light.png'); opacity: 0.3; z-index: 0;">
-            </div>
-        </section>
+    <!-- Brighter Starfield and Nebula -->
+    <div class="starfield" style="position: absolute; width: 100%; height: 100%; background: url('images/starfield_light.png'); opacity: 0.5; z-index: 0;"></div>
+    <div class="nebula" style="position: absolute; width: 100%; height: 100%; background: url('images/nebula_light.png'); opacity: 0.3; z-index: 0;"></div>
+</section>
+
+<style>
+    @keyframes floatPlanet {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-30px); }
+        100% { transform: translateY(0); }
+    }
+    
+    @keyframes spaceshipFly {
+        0% { transform: translateX(0) rotate(0deg); }
+        50% { transform: translateX(-20px) rotate(5deg); }
+        100% { transform: translateX(0) rotate(0deg); }
+    }
+</style>
 
         <!-- Learn About PACE - Enhanced Space Themed Section Extended -->
         <section id="learn" class="wrapper style2 space-themed learn-section">
@@ -87,38 +242,37 @@
                     </div>
                 </div>
 
-                <!-- Infographic Section -->
-                <div class="infographic-section">
-                    <h3 class="infographic-title">📊 How Does NASA PACE Collect Data?</h3>
-                    <p>Explore this infographic to see how NASA's PACE satellite observes Earth's atmosphere and oceans
-                        from space, providing critical data for our planet's future.</p>
-                    <div class="infographic-container">
-                        <img src="images/Info.jpeg" alt="NASA PACE Infographic">
-                    </div>
-                </div>
+        <!-- Infographic Section -->
+        <div class="infographic-section">
+            <h3 class="infographic-title">📊 How Does NASA PACE Collect Data?</h3>
+            <p>Explore this infographic to see how NASA's PACE satellite observes Earth's atmosphere and oceans from space, providing critical data for our planet's future.</p>
+            <div class="infographic-container">
+                <img src="https://github.com/Bushrahhh/OribtinPACE/blob/main/images/Info.jpeg" alt="NASA PACE Infographic">
+            </div>
+        </div>
 
-                <!-- Space Gallery Section -->
-                <div class="space-gallery">
-                    <h3 class="gallery-title">🛰️ NASA PACE Space Gallery</h3>
-                    <div class="gallery-container">
-                        <div class="gallery-item">
-                            <img src="images/LAUNCH.jpg" alt="PACE Satellite Launch">
-                            <p>PACE Satellite Launch 🚀</p>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/OBSERVING_EARTH.jpg" alt="Observing Earth from Space">
-                            <p>Observing Earth from Space 🌍</p>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/OCEAN_DATAA.jpg" alt="Ocean Data Collection">
-                            <p>Collecting Ocean Data 🌊</p>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/ATMOSPHERE.jpg" alt="Atmospheric Observation">
-                            <p>Atmospheric Observations ☁️</p>
-                        </div>
-                    </div>
+        <!-- Space Gallery Section -->
+        <div class="space-gallery">
+            <h3 class="gallery-title">🛰️ NASA PACE Space Gallery</h3>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="path/to/image1.jpg" alt="PACE Satellite Launch">
+                    <p>PACE Satellite Launch 🚀</p>
                 </div>
+                <div class="gallery-item">
+                    <img src="path/to/image2.jpg" alt="Observing Earth from Space">
+                    <p>Observing Earth from Space 🌍</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="path/to/image3.jpg" alt="Ocean Data Collection">
+                    <p>Collecting Ocean Data 🌊</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://github.com/Bushrahhh/OribtinPACE/blob/main/images/ATMOSPHERE.jpg" alt="Atmospheric Observation">
+                    <p>Atmospheric Observations ☁️</p>
+                </div>
+            </div>
+        </div>
 
                 <!-- Real-Time Space Data Widget -->
                 <div class="real-time-widget">
@@ -143,6 +297,95 @@
             </div>
         </section>
 
+<!-- CSS for New Sections -->
+<style>
+    /* Infographic Section */
+    .infographic-section {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .infographic-title {
+        font-size: 2.5rem;
+        color: #00d4ff;
+        margin-bottom: 30px;
+    }
+
+    .infographic-container img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 196, 255, 0.4);
+    }
+
+    /* Space Gallery Section */
+    .space-gallery {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .gallery-title {
+        font-size: 2.5rem;
+        color: #00ff80;
+        margin-bottom: 30px;
+    }
+
+    .gallery-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+    }
+
+    .gallery-item {
+        flex-shrink: 0;
+        width: 200px;
+        text-align: center;
+    }
+
+    .gallery-item img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 196, 255, 0.4);
+    }
+
+    .gallery-item p {
+        margin-top: 10px;
+        font-size: 1.1rem;
+        color: #00d4ff;
+    }
+
+    /* Real-Time Space Data Widget */
+    .real-time-widget {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .widget-title {
+        font-size: 2.5rem;
+        color: #00ff80;
+        margin-bottom: 30px;
+    }
+
+    .data-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .data-item {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 20px;
+        border-radius: 10px;
+        width: 200px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0, 196, 255, 0.4);
+        transition: transform 0.3s;
+    }
+
+    .data-item:hover {
+        transform: scale(1.05);
+    }
+</style>
 
         <!-- JavaScript for Buttons and Data Simulation -->
         <script>
@@ -233,82 +476,150 @@
                 </div>
             </div>
 
-    </div>
-    </section>
+</div>
+</section>
 
-    <!-- JavaScript for Chat Functionality -->
-    <!-- groq key: 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 -->
+<!-- Add this CSS to style the chatbot section -->
+<style>
+/* Chatbot Container */
+.chatbot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    margin-top: 20px;
+    padding: 20px;
+    flex-direction: column; /* Stack items vertically */
+}
 
-    <script>
-        const API_URL = 'https://api.groq.com/v1/models/gemma-7b-it/chat'; // Your Groq API endpoint
-        const API_KEY = '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'; // Your API key
-    
-        async function sendMessage() {
-            var userInput = document.getElementById("user-input").value;
-            if (userInput.trim() === "") return;
-    
-            var chatOutput = document.getElementById("chat-output");
-    
-            // Display User Message
-            var userMessage = document.createElement("p");
-            userMessage.className = "user-message";
-            userMessage.innerText = userInput;
-            chatOutput.appendChild(userMessage);
-    
-            // Clear Input
-            document.getElementById("user-input").value = "";
-    
-            // Display loading message
-            var loadingMessage = document.createElement("p");
-            loadingMessage.className = "bot-message";
-            loadingMessage.innerText = "SpaceBot is thinking... 🤔";
-            chatOutput.appendChild(loadingMessage);
-    
-            // Fetch API Response
-            try {
-                const response = await fetch(API_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${API_KEY}`
-                    },
-                    body: JSON.stringify({ prompt: userInput }) // Change 'question' to 'prompt'
-                });
-    
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-    
-                const data = await response.json();
-                console.log(data); // Log the full response for debugging
-    
-                // Check how the response is structured
-                const botResponse = data.response || data.answer || "I'm not sure how to answer that. Can you ask something else?";
-    
-                // Replace loading message with bot response
-                chatOutput.removeChild(loadingMessage);
-    
-                var botMessage = document.createElement("p");
-                botMessage.className = "bot-message";
-                botMessage.innerText = botResponse;
-                chatOutput.appendChild(botMessage);
-            } catch (error) {
-                console.error('Error fetching response:', error);
-                loadingMessage.innerText = "Sorry, I couldn't fetch an answer right now.";
-                // Log detailed error response if available
-                if (error.response) {
-                    const errorData = await error.response.json();
-                    console.error('Error details:', errorData); // Log the detailed error response
-                }
-            }
-    
-            // Scroll to the latest message
-            chatOutput.scrollTop = chatOutput.scrollHeight;
-        }
-    </script>
-    
+/* Chatbox Design */
+.chatbox {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 25px; /* Increased padding for a spacious feel */
+    border-radius: 15px;
+    width: 450px; /* Expanded width for the chatbox */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
 
+/* Title Styling */
+.cool-title {
+    color: #00d4ff;
+    font-family: 'Lucida Console', Monaco, monospace; /* Use a cooler font */
+    font-size: 2.2rem; /* Increased font size for emphasis */
+    text-align: center;
+    margin-bottom: 15px; /* Space between title and chatbox */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
 
+/* Chat Header */
+.chat-header {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-header h3 {
+    color: #00d4ff;
+    font-size: 2rem; /* Increased font size */
+    margin-bottom: 5px;
+    font-family: 'Lucida Console', Monaco, monospace; /* Use a cooler font */
+}
+
+.chat-header p {
+    font-size: 1.1rem; /* Slightly larger for better readability */
+    color: #ccc;
+}
+
+/* Chat Output */
+.chat-output {
+    height: 250px; /* Increased height for more messages */
+    overflow-y: auto;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.bot-message {
+    color: #00d4ff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.user-message {
+    color: #090979;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+/* Chat Input Box */
+.chat-input-box {
+    display: flex;
+    margin-top: 10px;
+}
+
+.chat-input-box input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.send-btn {
+    width: 20%;
+    border: none;
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    background: #00d4ff;
+    color: #020024;
+    font-size: 1.2rem;
+}
+
+.send-btn:hover {
+    background: #00a1ff;
+    color: #fff;
+}
+</style>
+
+<!-- JavaScript for Chat Functionality -->
+<script>
+function sendMessage() {
+    var userInput = document.getElementById("user-input").value;
+    if (userInput.trim() === "") return;
+
+    var chatOutput = document.getElementById("chat-output");
+    
+    // Display User Message
+    var userMessage = document.createElement("p");
+    userMessage.className = "user-message";
+    userMessage.innerText = userInput;
+    chatOutput.appendChild(userMessage);
+    
+    // Clear Input
+    document.getElementById("user-input").value = "";
+
+    // Simulated Bot Response
+    var botMessage = document.createElement("p");
+    botMessage.className = "bot-message";
+    botMessage.innerText = "Great question! I'm still learning, but you can explore more on the NASA PACE website.";
+    setTimeout(() => chatOutput.appendChild(botMessage), 1000);
+
+    // Scroll to the latest message
+    chatOutput.scrollTop = chatOutput.scrollHeight;
+}
+</script>
 
     </section>
 
